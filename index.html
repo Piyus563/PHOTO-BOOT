@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Booth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>📸 Photo Booth</h1>
+
+  <div class="camera-box">
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div class="filters">
+    <button onclick="setFilter('none')">Normal</button>
+    <button onclick="setFilter('grayscale(100%)')">B&W</button>
+    <button onclick="setFilter('sepia(100%)')">Sepia</button>
+    <button onclick="setFilter('contrast(120%) saturate(130%)')">Vintage</button>
+    <button onclick="setFilter('blur(2px)')">Blur</button>
+    <button onclick="setFilter('hue-rotate(180deg)')">Cool</button>
+  </div>
+
+  <div class="actions">
+    <button class="capture" onclick="capture()">📷 Capture</button>
+    <button class="collage" onclick="startCollage()">📸 3-Photo Collage</button>
+    <a id="download" download="photo.png">⬇ Download</a>
+  </div>
+
+  <div id="countdown" class="countdown"></div>
+  <div id="photos" class="photos"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
